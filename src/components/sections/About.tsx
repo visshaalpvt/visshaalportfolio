@@ -22,7 +22,7 @@ const About = () => {
 
   return (
     <section id="about" className="section-padding overflow-hidden" style={{ background: 'transparent' }}>
-      <div className="container-main" ref={ref}>
+      <div className="container mx-auto px-6 md:px-12 lg:px-24" ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

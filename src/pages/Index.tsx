@@ -19,28 +19,29 @@ const Index = () => {
       {/* Cursor-following glow effect - optimized */}
       <CursorGlow color="rgba(0, 255, 255, 0.10)" size={600} blur={120} />
 
-      {/* PrismaticBurst Background - Fixed overlay with intense rays */}
-      <div
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          zIndex: 0,
-          mixBlendMode: 'screen',
-          opacity: isMobile ? 0.3 : 1 // Reduce visibility on mobile for better text contrast
-        }}
-      >
-        <PrismaticBurst
-          animationType="rotate3d"
-          intensity={isMobile ? 1.0 : 1.8} // Reduce intensity on mobile
-          speed={isMobile ? 0.1 : 0.3} // Slower speed on mobile
-          distort={1.2}
-          paused={false}
-          offset={{ x: 0, y: 0 }}
-          hoverDampness={0.25}
-          rayCount={isMobile ? 12 : 24} // Fewer rays on mobile
-          mixBlendMode="lighten"
-          colors={['#00ffff', '#b478ff', '#ff6b9d', '#00d4aa', '#ff00ff', '#0ea5e9']}
-        />
-      </div>
+      {/* PrismaticBurst Background - Desktop Only for Performance */}
+      {!isMobile && (
+        <div
+          className="fixed inset-0 pointer-events-none"
+          style={{
+            zIndex: 0,
+            mixBlendMode: 'screen'
+          }}
+        >
+          <PrismaticBurst
+            animationType="rotate3d"
+            intensity={1.8}
+            speed={0.3}
+            distort={1.2}
+            paused={false}
+            offset={{ x: 0, y: 0 }}
+            hoverDampness={0.25}
+            rayCount={24}
+            mixBlendMode="lighten"
+            colors={['#00ffff', '#b478ff', '#ff6b9d', '#00d4aa', '#ff00ff', '#0ea5e9']}
+          />
+        </div>
+      )}
 
       {/* Content - seamless design with no gaps */}
       <div className="relative z-10" style={{ display: 'flex', flexDirection: 'column' }}>
