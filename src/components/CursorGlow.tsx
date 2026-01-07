@@ -55,6 +55,11 @@ const CursorGlow = ({
         };
     }, [size]);
 
+    // Don't render on mobile/touch devices to save performance
+    if (typeof window !== 'undefined' && (window.matchMedia('(max-width: 768px)').matches || 'ontouchstart' in window)) {
+        return null;
+    }
+
     return (
         <div
             ref={glowRef}

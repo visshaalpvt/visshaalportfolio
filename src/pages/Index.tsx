@@ -12,6 +12,8 @@ import PrismaticBurst from '@/components/PrismaticBurst';
 import CursorGlow from '@/components/CursorGlow';
 
 const Index = () => {
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches;
+
   return (
     <main className="min-h-screen bg-background relative" style={{ overflow: 'hidden', overflowX: 'hidden', overflowY: 'auto' }}>
       {/* Cursor-following glow effect - optimized */}
@@ -22,18 +24,19 @@ const Index = () => {
         className="fixed inset-0 pointer-events-none"
         style={{
           zIndex: 0,
-          mixBlendMode: 'screen'
+          mixBlendMode: 'screen',
+          opacity: isMobile ? 0.3 : 1 // Reduce visibility on mobile for better text contrast
         }}
       >
         <PrismaticBurst
           animationType="rotate3d"
-          intensity={1.8}
-          speed={0.3}
+          intensity={isMobile ? 1.0 : 1.8} // Reduce intensity on mobile
+          speed={isMobile ? 0.1 : 0.3} // Slower speed on mobile
           distort={1.2}
           paused={false}
           offset={{ x: 0, y: 0 }}
           hoverDampness={0.25}
-          rayCount={24}
+          rayCount={isMobile ? 12 : 24} // Fewer rays on mobile
           mixBlendMode="lighten"
           colors={['#00ffff', '#b478ff', '#ff6b9d', '#00d4aa', '#ff00ff', '#0ea5e9']}
         />
