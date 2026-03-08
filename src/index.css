@@ -204,10 +204,9 @@
   /* Luminous Background Cards */
   .luminous-card {
     background: linear-gradient(145deg,
-        rgba(20, 25, 40, 0.95) 0%,
-        rgba(15, 18, 30, 0.98) 100%);
+        rgba(20, 25, 40, 0.98) 0%,
+        rgba(10, 15, 25, 0.99) 100%);
     border: 1px solid rgba(0, 255, 255, 0.18);
-    backdrop-filter: blur(10px);
     box-shadow:
       0 8px 32px rgba(0, 0, 0, 0.4),
       0 0 40px rgba(0, 255, 255, 0.05),

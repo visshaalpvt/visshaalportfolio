@@ -6,6 +6,20 @@ import Autoplay from 'embla-carousel-autoplay';
 
 const achievements = [
   {
+    place: 'Winner',
+    event: 'AI Ignite National Hackathon',
+    venue: 'Pondicherry',
+    image: '/hackathons/aiignite-pondicherry.jpg',
+    description: 'Winning moment at AI Ignite, Pondicherry'
+  },
+  {
+    place: 'Winner',
+    event: 'Hackathon Win',
+    venue: 'Rathinam Engineering College',
+    image: '/hackathons/rathinam-coimbatore.png',
+    description: 'Winning moment at Rathinam Engineering College, Coimbatore'
+  },
+  {
     place: '1st Place',
     event: "ThinkFinity '25",
     venue: 'Sriram Engineering College',
