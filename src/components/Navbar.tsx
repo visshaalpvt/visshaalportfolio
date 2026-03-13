@@ -103,6 +103,15 @@ const Navbar = () => {
 
           <div className="flex items-center gap-4">
             <motion.a
+              href="/resume/visshaal_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:block text-sm font-medium px-4 py-2 rounded-lg border border-primary/30 text-primary hover:bg-primary/10 transition-all"
+              whileHover={{ scale: 1.02 }}
+            >
+              Resume
+            </motion.a>
+            <motion.a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
               className="hidden sm:block text-sm font-medium px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-all"
@@ -146,6 +155,17 @@ const Navbar = () => {
               {link.name}
             </motion.a>
           ))}
+          <motion.a
+            href="/resume/visshaal_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, x: -20 }}
+            animate={mobileMenuOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+            transition={{ delay: navLinks.length * 0.05 }}
+            className="block text-lg font-medium text-primary transition-colors"
+          >
+            Resume
+          </motion.a>
         </div>
       </motion.div>
 

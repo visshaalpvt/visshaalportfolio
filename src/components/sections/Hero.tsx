@@ -110,12 +110,18 @@ const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4"
         >
           <MagneticButton variant="hero" size="lg" asChild>
             <a href="#projects">View My Work</a>
           </MagneticButton>
           <MagneticButton variant="heroOutline" size="lg" asChild>
+            <a href="/resume/visshaal_resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+          </MagneticButton>
+          <MagneticButton variant="heroOutline" size="lg" asChild>
+            <a href="/resume/visshaal_resume.pdf" download="Visshaal_Resume.pdf">Download Resume</a>
+          </MagneticButton>
+          <MagneticButton variant="hero" size="lg" asChild>
             <a href="#contact">Let's Build Together</a>
           </MagneticButton>
         </motion.div>
