@@ -6,6 +6,13 @@ import Autoplay from 'embla-carousel-autoplay';
 
 const achievements = [
   {
+    place: '2nd Prize',
+    event: 'Chakravyuha 2k26',
+    venue: 'JJ College of Engineering, Trichy',
+    image: null,
+    description: 'Winner of 2nd Prize at Chakravyuha 2k26 Hackathon'
+  },
+  {
     place: 'Winner',
     event: 'AI Ignite National Hackathon',
     venue: 'Pondicherry',

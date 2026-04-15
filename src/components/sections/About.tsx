@@ -7,7 +7,7 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const stats = [
-    { value: '4+', label: 'Hackathon Wins', icon: Trophy },
+    { value: '9', label: 'Hackathon Wins', icon: Trophy },
     { value: '10+', label: 'Projects Built', icon: Briefcase },
     { value: '1', label: 'Active Startup', icon: Rocket },
   ];

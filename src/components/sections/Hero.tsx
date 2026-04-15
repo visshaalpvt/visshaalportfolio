@@ -116,10 +116,10 @@ const Hero = () => {
             <a href="#projects">View My Work</a>
           </MagneticButton>
           <MagneticButton variant="heroOutline" size="lg" asChild>
-            <a href="/resume/visshaal_resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+            <a href="/resume/140426-resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
           </MagneticButton>
           <MagneticButton variant="heroOutline" size="lg" asChild>
-            <a href="/resume/visshaal_resume.pdf" download="Visshaal_Resume.pdf">Download Resume</a>
+            <a href="/resume/140426-resume.pdf" download="Visshaal_Resume.pdf">Download Resume</a>
           </MagneticButton>
           <MagneticButton variant="hero" size="lg" asChild>
             <a href="#contact">Let's Build Together</a>

@@ -103,7 +103,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-4">
             <motion.a
-              href="/resume/visshaal_resume.pdf"
+              href="/resume/140426-resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:block text-sm font-medium px-4 py-2 rounded-lg border border-primary/30 text-primary hover:bg-primary/10 transition-all"
@@ -156,7 +156,7 @@ const Navbar = () => {
             </motion.a>
           ))}
           <motion.a
-            href="/resume/visshaal_resume.pdf"
+            href="/resume/140426-resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, x: -20 }}
