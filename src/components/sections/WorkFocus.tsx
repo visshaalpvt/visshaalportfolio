@@ -42,25 +42,29 @@ const WorkFocus = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-sm font-bold text-cyan-400 uppercase tracking-widest mb-4"
+                        className="text-sm font-medium text-primary uppercase tracking-widest mb-4"
                     >
                         What I Work On
                     </motion.h2>
-                    <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto" />
+                    <div className="w-16 h-0.5 bg-gradient-accent mx-auto" />
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {workItems.map((item, index) => (
                         <motion.div
                             key={item.title}
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 40 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{
                                 duration: 0.8,
                                 delay: 0.1 + index * 0.1,
                                 ease: [0.16, 1, 0.3, 1],
                             }}
-                            className="group p-8 rounded-3xl cursor-default relative overflow-hidden transition-all duration-500 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] bg-[#0B1022]/40 border border-white/5 hover:border-cyan-500/20"
+                            className="group p-8 rounded-2xl cursor-default relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,255,255,0.15)]"
+                            style={{
+                                background: 'linear-gradient(145deg, rgba(20, 28, 45, 0.95) 0%, rgba(12, 16, 28, 0.98) 100%)',
+                                border: '1px solid rgba(0, 255, 255, 0.15)',
+                            }}
                         >
                             {/* Glow overlay on hover */}
                             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
@@ -68,13 +72,13 @@ const WorkFocus = () => {
                             </div>
 
                             <div className="relative z-10">
-                                <div className="w-14 h-14 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-center mb-6 group-hover:scale-105 transition-all duration-300 shadow-inner">
-                                    <item.icon className="w-7 h-7 text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.4)]" />
+                                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center mb-6 group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300 shadow-[0_0_20px_rgba(0,255,255,0.15)]">
+                                    <item.icon className="w-7 h-7 text-cyan-400 drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]" />
                                 </div>
                                 <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                                     {item.title}
                                 </h3>
-                                <p className="text-slate-400 text-sm leading-relaxed">
+                                <p className="text-gray-300 leading-relaxed">
                                     {item.description}
                                 </p>
                             </div>
